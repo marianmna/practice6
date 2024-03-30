@@ -1,21 +1,12 @@
-def kghnite_move(x_1, y_1, x_2, y_2):
-    diff_x = abs(int(x_1) - int(x_2))
-    diff_y = abs(int(y_1) - int(y_2))
+cell = input("Введите координаты откуда идет конь и куда (Пример: d3-e5): ")
 
-    if (diff_x == 1 and diff_y == 2) or (diff_x == 2 and diff_y == 1):
-        return True
-    else:
-        return False
+start_sq = cell[0:2]
+end_sq = cell[3:5]
 
-n, m = input().split(sep='-')
+dx = abs(ord(start_sq[0]) - ord(end_sq[0]))
+dy = abs(int(start_sq[1]) - int(end_sq[1]))
 
-k = 'abcdefgh'
-x_1 = k.index(n[0])+1
-y_1 = n[1]
-x_2 = k.index(m[0])+1
-y_2 = m[1]
-
-if kghnite_move(x_1, y_1, x_2, y_2):
-    print('верно')
+if (dx == 1 and dy == 2) or (dx == 2 and dy == 1):
+    print("Верно")
 else:
-    print('ошибка')
+    print("Ошибка")

@@ -40,6 +40,7 @@ def circle_relation(x_1, y_1, r_1, x_2, y_2, r_2):
     else:
         return "Окружности пересекаются"
 
+
 relation = circle_relation(x_1, y_1, r_1, x_2, y_2, r_2)
 print(relation)
 
